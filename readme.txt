@@ -1,4 +1,4 @@
-As this is simple applicaiton, Maven or other build tools are not used here. To generate a transaction report, please run ReportGenerator. By default, it reads input.txt from src/resources and then save output.csv to c:\report\output.csv and log file can also be found under c:\report.
+As this is a simple applicaiton, Maven or other build tools are not used here. To generate a transaction report, please run ReportGenerator. By default, it reads input.txt from src/resources and then save output.csv to c:\report\output.csv and log file can also be found under c:\report.
 
 User can change the report style in report_config.xml which is under src/resources.
 For instance, if user want to have Product_Information but is composed of CURRENCY CODE and 
