@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<informations>
+	<information name="Client Info" mode="concat">
+		<items>
+			<item>
+				<name>Client Type</name>
+				<beginIndex>4</beginIndex>
+				<endIndex>7</endIndex>
+			</item>
+			<item>
+				<name>Client Number</name>
+				<beginIndex>8</beginIndex>
+				<endIndex>11</endIndex>
+			</item>
+			<item>
+				<name>ACCOUNT NUMBER</name>
+				<beginIndex>12</beginIndex>
+				<endIndex>15</endIndex>
+			</item>
+			<item>
+				<name>SUBACCOUNT NUMBER</name>
+				<beginIndex>16</beginIndex>
+				<endIndex>19</endIndex>
+			</item>
+		</items>
+	</information>
+	<information name="Product Info" mode="concat">
+		<items>
+			<item>
+				<name>EXCHANGE CODE</name>
+				<beginIndex>28</beginIndex>
+				<endIndex>31</endIndex>
+			</item>
+			<item>
+				<name>PRODUCT GROUP CODE</name>
+				<beginIndex>26</beginIndex>
+				<endIndex>27</endIndex>
+			</item>
+			<item>
+				<name>SYMBOL</name>
+				<beginIndex>32</beginIndex>
+				<endIndex>37</endIndex>
+			</item>
+			<item>
+				<name>EXPIRATION DATE</name>
+				<beginIndex>38</beginIndex>
+				<endIndex>45</endIndex>
+			</item>
+		</items>
+	</information>
+	<information name="Total Transaction Amount"
+		mode="calculation">
+		<!-- When mode is calculation every two items compose of a transaction 
+			amount, the first item represents transaction amount sign, it means negative 
+			value when it's greater 1, otherwise it's positive value. the second item 
+			represents a transaction amount. -->
+		<items>
+			<item>
+				<name>QUANTITY LONG Sign</name>
+				<beginIndex>52</beginIndex>
+				<endIndex>52</endIndex>
+			</item>
+			<item>
+				<name>QUANTITY LONG</name>
+				<beginIndex>53</beginIndex>
+				<endIndex>62</endIndex>
+				<!-- first item must be + as first item plus zero as initial result -->
+				<operator>+</operator>
+			</item>
+			<item>
+				<name>QUANTITY SHORT Sign</name>
+				<beginIndex>63</beginIndex>
+				<endIndex>63</endIndex>
+			</item>
+			<item>
+				<name>QUANTITY SHORT</name>
+				<beginIndex>64</beginIndex>
+				<endIndex>73</endIndex>
+				<operator>-</operator>
+			</item>
+		</items>
+	</information>
+</informations>
